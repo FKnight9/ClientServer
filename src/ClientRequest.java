@@ -17,13 +17,19 @@ public class ClientRequest
             Search access =
                 (Search)Naming.lookup("rmi://155.246.211.41:5002"+"/CPE545"); //Change based on Faris
             List<String> list = access.query(value);
-        	Iterator<String> iter = list.iterator();
-        	System.out.println("Students name(s):");
-        	while(iter.hasNext()) {
-        		answer = iter.next();      		
-        		System.out.println(value + " " + answer);
-        	}
+            if(list.size() == 0) {
+            	System.out.println("No Names Found");
+            }
+            else {
+	        	Iterator<String> iter = list.iterator();
+	        	System.out.println("Students name(s):");
+	        	while(iter.hasNext()) {
+	        		answer = iter.next();      		
+	        		System.out.println(value + " " + answer);
+	        	}
+            }
         }
+           
         catch(Exception ae)
         {
             System.out.println(ae);
