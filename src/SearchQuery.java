@@ -38,8 +38,11 @@ public class SearchQuery extends UnicastRemoteObject
     	List<String> result = new ArrayList<String>();
     	Iterator<Student> iter = list.iterator();
     	while(iter.hasNext()) {
-    		if(iter.next().getFirstName() == search) {
-    			result.add(iter.next().getLastName());
+    		Student student = iter.next();
+    		//System.out.println(search + " " + firstName + lastName);    		
+    		if(student.getFirstName().equals(search)) {
+    			//System.out.println("Found");
+    			result.add(student.getLastName());
     		}
     	}
         return result;
