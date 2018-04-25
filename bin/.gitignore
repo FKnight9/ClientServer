@@ -1,2 +1,6 @@
 /Client.class
 /Server.class
+/ClientRequest.class
+/Search.class
+/SearchQuery.class
+/SearchServer.class
