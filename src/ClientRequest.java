@@ -15,7 +15,7 @@ public class ClientRequest
         {
             // lookup method to find reference of remote object
             Search access =
-                (Search)Naming.lookup("rmi://155.246.211.41:5002"+"/CPE545"); //Change based on Faris
+                (Search)Naming.lookup("rmi://155.246.211.160:5002"+"/CPE545"); //Change based on Faris
             List<String> list = access.query(value);
             if(list.size() == 0) {
             	System.out.println("No Names Found");

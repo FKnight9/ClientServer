@@ -21,7 +21,7 @@ public class SearchServer
  
             // Binds the remote object by the name
             // geeksforgeeks
-            Naming.rebind("rmi://155.246.211.41:5002"+
+            Naming.rebind("rmi://155.246.211.160:5002"+
                           "/CPE545",obj);
         }
         catch(Exception ae)
